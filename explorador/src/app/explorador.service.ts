@@ -15,4 +15,13 @@ export class ExploradorService {
   getAllCountries() {
     return this.http.get<any[]>(this.url).pipe(map(data => (data ? data[1] : [])));
   }
+
+  getCountryId(id) {
+    return this.http.get(`https://api.worldbank.org/v2/country/${id}?per_page=1000&format=json`)
+    .pipe(map(data => (data ? data[1][0] : [])));
+
+  }
+
 }
+
+

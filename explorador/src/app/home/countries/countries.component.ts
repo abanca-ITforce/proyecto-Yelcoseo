@@ -13,7 +13,7 @@ export class CountriesComponent implements OnInit {
 
   constructor(activatedRoute: ActivatedRoute, private exploradorService: ExploradorService) {
 
-    // this.countries = this.exploradorService.getAllCountries();
+
 
 
   }

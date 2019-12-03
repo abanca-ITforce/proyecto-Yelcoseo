@@ -1,0 +1,18 @@
+<div *ngIf="country$ | async as country">
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar> <mat-icon>language</mat-icon></div>
+    <mat-card-title>Country: {{ country.name }}</mat-card-title>
+    <mat-card-subtitle>Region: {{ country.region.value }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <span>
+      Longitude: {{ country.longitude }}
+    </span>
+  </mat-card-content>
+</mat-card>
+</div>
+
+
+
+
