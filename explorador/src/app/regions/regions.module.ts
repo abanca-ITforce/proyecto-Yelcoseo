@@ -4,12 +4,18 @@ import { CommonModule } from '@angular/common';
 import { RegionsRoutingModule } from './regions-routing.module';
 import { RegionsComponent } from './regions.component';
 
+import { RegionComponent } from './region/region.component';
+import { RegionsListComponent } from './regions-list/regions-list.component';
+import { MatListModule } from '@angular/material/list';
+
 
 @NgModule({
-  declarations: [RegionsComponent],
+  declarations: [RegionsComponent, RegionComponent, RegionsListComponent],
   imports: [
     CommonModule,
-    RegionsRoutingModule
+    RegionsRoutingModule,
+    MatListModule
+
   ]
 })
 export class RegionsModule { }

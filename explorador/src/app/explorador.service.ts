@@ -22,6 +22,11 @@ export class ExploradorService {
 
   }
 
+  getAllRegions() {
+    return this.http.get(`https://api.worldbank.org/v2/region/?format=json`)
+    .pipe(map(data => (data ? data[1] : [])));
+  }
+
 }
 
 
