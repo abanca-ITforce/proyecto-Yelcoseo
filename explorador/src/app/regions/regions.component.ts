@@ -12,7 +12,7 @@ export class RegionsComponent implements OnInit {
   regions$: Observable<any>;
   constructor(activatedRoute: ActivatedRoute, private exploradorService: ExploradorService) {
     this.regions$ = this.exploradorService.getAllRegions();
-    // this.exploradorService.getAllRegions().subscribe(data => console.log(data));
+    this.exploradorService.getAllRegions().subscribe(data => console.log(data));
   }
 
   ngOnInit() {
