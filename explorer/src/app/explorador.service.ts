@@ -37,6 +37,10 @@ export class ExploradorService {
     .pipe(map(data => (data ? data[1] : [])));
   }
 
+  getCountriesByIncome() {
+    return this.http.get(`https://api.worldbank.org/v2/incomeLevel/?format=json`)
+    .pipe(map(data => (data ? data[1] : [])));
+  }
 
 }
 

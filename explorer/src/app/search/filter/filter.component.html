@@ -1,0 +1,10 @@
+<mat-form-field>
+  <mat-label>Income</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let option of income" [value]="option.value">
+      {{option.value}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<!-- [income] = "option.incomeLevel" -->

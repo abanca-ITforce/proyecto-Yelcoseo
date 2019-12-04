@@ -3,13 +3,19 @@ import { CommonModule } from '@angular/common';
 
 import { SearchRoutingModule } from './search-routing.module';
 import { SearchComponent } from './search.component';
+import { FilterComponent } from './filter/filter.component';
+import { ResultListComponent } from './result-list/result-list.component';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
-  declarations: [SearchComponent],
+  declarations: [SearchComponent, FilterComponent, ResultListComponent],
   imports: [
     CommonModule,
-    SearchRoutingModule
+    SearchRoutingModule,
+    MatSelectModule
+
+
   ]
 })
 export class SearchModule { }
