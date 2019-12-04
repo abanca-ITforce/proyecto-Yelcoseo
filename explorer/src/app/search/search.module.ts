@@ -6,6 +6,8 @@ import { SearchComponent } from './search.component';
 import { FilterComponent } from './filter/filter.component';
 import { ResultListComponent } from './result-list/result-list.component';
 import {MatSelectModule} from '@angular/material/select';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -13,8 +15,9 @@ import {MatSelectModule} from '@angular/material/select';
   imports: [
     CommonModule,
     SearchRoutingModule,
-    MatSelectModule
-
+    MatSelectModule,
+    MatButtonModule,
+    MatCardModule
 
   ]
 })
