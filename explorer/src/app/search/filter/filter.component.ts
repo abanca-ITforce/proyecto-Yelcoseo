@@ -8,7 +8,9 @@ import { ExploradorService } from 'src/app/explorador.service';
   styleUrls: ['./filter.component.css']
 })
 export class FilterComponent implements OnInit {
-  @Input() income;
+  @Input() incomes;
+  @Input() debts;
+  @Input() regions;
   constructor(activatedRoute: ActivatedRoute, private exploradorService: ExploradorService) {
 
    }

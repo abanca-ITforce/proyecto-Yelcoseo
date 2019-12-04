@@ -1,8 +1,24 @@
 <mat-form-field>
   <mat-label>Income</mat-label>
   <mat-select>
-    <mat-option *ngFor="let option of income" [value]="option.value">
-      {{option.value}}
+    <mat-option *ngFor="let income of incomes" [value]="income.value">
+      {{income.value}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Debt</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let debt of debts" [value]="debt.value">
+      {{debt.value}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Region</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let region of regions" [value]="region.value">
+      {{region.code}}
     </mat-option>
   </mat-select>
 </mat-form-field>
