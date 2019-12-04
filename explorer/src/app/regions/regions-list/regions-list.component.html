@@ -1,0 +1,4 @@
+<mat-nav-list>
+<a *ngFor="let region of regions; let i = index" mat-list-item [routerLink]="region.code">{{ region.name }}</a>
+</mat-nav-list>
+
