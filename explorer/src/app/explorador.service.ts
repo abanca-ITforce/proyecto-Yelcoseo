@@ -53,10 +53,7 @@ export class ExploradorService {
   }
 
   getSearchResult(info){
-    return this.http.get(`https://api.worldbank.org/v2/country?
-    lendingType=${info.lendings}
-    &incomeLevel=${info.incomes}
-    &region=${info.regions}&per_page=1000&format=json`)
+    return this.http.get(`https://api.worldbank.org/v2/country?lendingType=${info.debts}&incomeLevel=${info.incomes}&region=${info.regions}&per_page=1000&format=json`)
     .pipe(map(data => (data ? data[1] : [])));
   }
 }
