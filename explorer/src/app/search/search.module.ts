@@ -8,6 +8,8 @@ import { ResultListComponent } from './result-list/result-list.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import {MatCardModule} from '@angular/material/card';
     SearchRoutingModule,
     MatSelectModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatListModule,
+    ReactiveFormsModule
 
   ]
 })

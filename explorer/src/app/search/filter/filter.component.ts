@@ -1,6 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { ExploradorService } from 'src/app/explorador.service';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-filter',
@@ -11,11 +10,22 @@ export class FilterComponent implements OnInit {
   @Input() incomes;
   @Input() debts;
   @Input() regions;
-  constructor(activatedRoute: ActivatedRoute, private exploradorService: ExploradorService) {
+  @Output() filter = new EventEmitter<any>();
+
+  searchForm = this.formBuilder.group({
+    incomes: [null, []],
+    debts: [null, []],
+    regions: [null, []]
+  });
+
+  constructor(private formBuilder: FormBuilder) {
 
    }
 
   ngOnInit() {
+  }
+  onSubmit() {
+    this.filter.emit(this.searchForm.value);
   }
 
 }

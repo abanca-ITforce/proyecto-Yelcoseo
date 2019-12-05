@@ -1,14 +1,15 @@
+<form [formGroup]="searchForm" novalidate>
 <mat-form-field>
   <mat-label>Income</mat-label>
-  <mat-select>
-    <mat-option *ngFor="let income of incomes" [value]="income.value">
+  <mat-select placeholder="Incomes" formControlName = "incomes">
+    <mat-option *ngFor="let income of incomes" [value]="income.id">
       {{income.value}}
     </mat-option>
   </mat-select>
 </mat-form-field>
 <mat-form-field>
   <mat-label>Debt</mat-label>
-  <mat-select>
+  <mat-select mplaceholder="Debts" formControlName = "debts">
     <mat-option *ngFor="let debt of debts" [value]="debt.value">
       {{debt.value}}
     </mat-option>
@@ -16,24 +17,19 @@
 </mat-form-field>
 <mat-form-field>
   <mat-label>Region</mat-label>
-  <mat-select>
+  <mat-select placeholder="Regions" formControlName = "regions">
     <mat-option *ngFor="let region of regions" [value]="region.value">
       {{region.code}}
     </mat-option>
   </mat-select>
 </mat-form-field>
 <mat-card-actions>
-  <button mat-raised-button> Submit </button>
+  <button mat-raised-button type="submit" (click)="onSubmit()"> Submit </button>
 </mat-card-actions>
+</form>
 
-<!-- <mat-card-actions>
-  <button
-    mat-raised-button
-    color="primary"
-    type="submit"
-    [disabled]="taskForm.invalid"
-    (click)="onSubmit()"
-  >
-    Submit
-  </button>
-</mat-card-actions> -->
+<!-- <form novalidate [formGroup]="group">
+  Name: <input type="text" formControlName="name">
+  Location: <input type="text" formControlName="location">
+</form> -->
+

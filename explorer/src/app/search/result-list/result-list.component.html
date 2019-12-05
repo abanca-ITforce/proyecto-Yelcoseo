@@ -1,1 +1,5 @@
 <p>result-list works!</p>
+
+<mat-nav-list *ngIf="filterList">
+  <a *ngFor="let result of filterList; let i = index" mat-list-item [routerLink]="result.code">{{ result.name }}</a>
+  </mat-nav-list>
