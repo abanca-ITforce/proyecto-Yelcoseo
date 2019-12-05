@@ -1,3 +1,2 @@
-<p>search works!</p>
 <app-filter [incomes]="incominglevel$ | async" [debts]="doubts$ | async" [regions]="region$ | async" (filter)="onResult($event)"></app-filter>
 <app-result-list [filterList]="filter$ | async"></app-result-list>
